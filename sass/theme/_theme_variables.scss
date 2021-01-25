@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap");
+// Bootstrap Variables
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1320px,
+) !default;
+$navbar-dark-toggler-icon-bg: url("../img/menu-black-36dp.svg") !default;
+.tooltip-inner {
+	padding: 10px 1rem !important;
+	border-radius: 0 !important;
+	font-family: "Montserrat", sans-serif;
+}
+// Colors
+$primary-color: #1c2b32;
+$secondary-color: #2b4752;
+$accent-color: #d6fff7;
+$color-primary: #292b2c;
+$color-background: #f6f6f6;
+$color-text: #1a252a;
+$color-text-secondary: #6c757d;
+$color-light: #fff;
+$color-anchor: #292b2c;
+// Sizing
+$font-size-h1: 5rem;
+$font-size-h2: 3rem;
+$font-size-h3: 2.5rem;
+$font-size-h4: 1.35rem;
+$font-size-text: 1.15rem;
+$border-color: #eaeaea;
+$border-radius: 8px;
+$box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+$box-shadow-hover: 0 3.4px 2.7px rgba(0, 0, 0, 0.012),
+	0 8.7px 6.9px rgba(0, 0, 0, 0.018), 0 17.7px 14.2px rgba(0, 0, 0, 0.022),
+	0 36.5px 29.2px rgba(0, 0, 0, 0.028), 0 100px 80px rgba(0, 0, 0, 0.04);
+$box-shadow-hov: 0 0 8px rgba(0, 0, 0, 0.6);
+$light-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-img: 2px 2px 10px #aaa;
+// Fonts
+$Lato: "Lato", sans-serif;
+$Montserrat: "Montserrat", sans-serif;

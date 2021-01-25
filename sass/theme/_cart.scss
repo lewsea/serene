@@ -1,0 +1,115 @@
+.woocommerce-cart-form {
+	.shop_table {
+		thead {
+			tr {
+				th {
+					font-weight: 400;
+					text-transform: uppercase;
+					font-size: 14px;
+					font-family: $Lato !important;
+				}
+			}
+		}
+		tbody {
+			tr {
+				.product-remove {
+					a {
+						color: #dc3545 !important;
+						&:hover {
+							color: #dc3545 !important;
+							background-color: unset !important;
+							transform: scale(1.1);
+						}
+					}
+				}
+				.product-thumbnail {
+					a {
+						img {
+							border: 1px solid black;
+							min-width: 80px;
+						}
+					}
+				}
+				.product-name {
+					a {
+						color: $color-anchor;
+						font-weight: 500;
+					}
+				}
+				.product-price,
+				.product-subtotal {
+					color: $primary-color;
+				}
+				.actions {
+					padding: 1.5rem;
+					.coupon {
+						button {
+							font-family: $Lato !important;
+							border: 1px solid $primary-color;
+							color: $color-anchor;
+							border-radius: 8px;
+							padding: 5px 1.5rem;
+							&:hover {
+								background-color: $primary-color;
+								color: $color-light;
+							}
+						}
+					}
+					button {
+						font-family: $Lato;
+						border: 1px solid $primary-color;
+						color: $color-anchor;
+						border-radius: 8px;
+						padding: 5px 1.5rem;
+						&:hover {
+							background-color: $primary-color;
+							color: $color-light;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.cart-collaterals {
+	.cart_totals {
+		float: none !important;
+		width: auto !important;
+		h2 {
+			font-size: 1.2rem;
+			font-family: $Lato;
+			text-transform: uppercase;
+		}
+		table {
+			margin-top: 1rem;
+			tbody {
+				tr {
+					th {
+						font-weight: 400;
+						text-transform: uppercase;
+						font-size: 14px;
+						font-family: $Lato !important;
+					}
+					td {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+		.wc-proceed-to-checkout {
+			display: inline-block;
+			a {
+				font-family: $Lato !important;
+				border: none;
+				color: $color-light;
+				border-radius: 8px;
+				padding: 5px 2rem;
+				background-color: $primary-color;
+				&:hover {
+					background-color: lighten($primary-color, 10%);
+				}
+			}
+		}
+	}
+}

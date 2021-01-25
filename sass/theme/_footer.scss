@@ -1,0 +1,137 @@
+#wrapper-footer {
+	padding: 0;
+	font-family: $Montserrat;
+	.email-section {
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 1rem;
+		padding: 10px 0;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			gap: 2rem;
+			align-items: center;
+			.email-input-wrapper {
+				flex: 2;
+				display: flex;
+				margin: 10px 0;
+				width: 100%;
+				input[type="email"] {
+					flex: 70%;
+					padding: 8px 1rem;
+					border: 1px solid $border-color;
+				}
+				input[type="submit"] {
+					flex: 30%;
+					background-color: $secondary-color;
+					color: $color-light;
+					border: none;
+					&:hover {
+						background-color: darken($primary-color, 5%);
+					}
+				}
+				.wpcf7 {
+					margin: 0 !important;
+					.wpcf7-form {
+						display: flex;
+						align-items: center;
+						.wpcf7-form-control {
+							border-radius: 0;
+						}
+						p:nth-child(3) {
+							align-self: center;
+							input {
+								border-radius: 0;
+							}
+							.ajax-loader {
+								display: none !important;
+							}
+						}
+					}
+				}
+			}
+			p {
+				margin: 0;
+				a {
+					color: $color-anchor;
+				}
+			}
+		}
+	}
+	#colophon {
+		.footer-nav {
+			display: flex;
+			gap: 1rem;
+			font-size: 14px;
+			margin: 1rem 0;
+			.footer-nav-blocks {
+				flex: 1;
+				padding: 1rem 1.4rem;
+				&:nth-child(2) {
+					border-left: 1px solid $border-color;
+				}
+				.footer-nav-links,
+				.footer-description {
+					margin: 20px 0;
+					p {
+						a {
+							color: $color-anchor;
+						}
+					}
+				}
+				.p-description {
+					line-height: 1.6rem;
+				}
+				.footer-socials {
+					.fa {
+						font-size: 1.2rem;
+						margin-right: 10px;
+						color: $color-text-secondary;
+						&:hover {
+							color: $color-anchor;
+						}
+					}
+				}
+				.footer-nav-links {
+					ul {
+						padding: 0;
+						line-height: 2rem;
+						li {
+							list-style: none;
+							a {
+								text-decoration: none;
+								color: $color-text-secondary;
+								&:hover {
+									color: $color-anchor;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-copy {
+		border-top: 1px solid $border-color;
+		padding: 0.3rem 0;
+		font-size: 12px;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p {
+				margin: 0;
+				font-weight: 300;
+				a {
+					color: $color-anchor;
+				}
+			}
+			.payment-method {
+				.iconify {
+					font-size: 1.2rem;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

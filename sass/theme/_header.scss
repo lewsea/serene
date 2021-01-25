@@ -1,0 +1,191 @@
+#wrapper-navbar {
+	border-bottom: 1px solid $border-color;
+	background-color: transparent;
+	background-blend-mode: overlay;
+	z-index: 1;
+	position: relative;
+	#main-menu {
+		align-items: center;
+		.current-menu-item {
+			.nav-link {
+				position: relative;
+				&::after {
+					content: "";
+					background-color: $secondary-color;
+					border-radius: 10px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 2px;
+					width: 100% !important;
+				}
+			}
+		}
+		.menu-item {
+			.nav-link {
+				color: $primary-color;
+				font-family: $Montserrat;
+				margin: 0 15px;
+				padding: 0;
+				position: relative;
+				&::after {
+					content: "";
+					background-color: $primary-color;
+					border-radius: 10px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 2px;
+					width: 0%;
+					transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.4s;
+				}
+				&:hover::after {
+					width: 100%;
+				}
+			}
+		}
+		.dropdown-menu {
+			margin: 8px 0 0;
+			font-family: $Montserrat;
+		}
+	}
+}
+
+.icon-menu-nav {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	.nav-link {
+		padding: 0 8px;
+		a {
+			color: $primary-color;
+			.fa-heart-o {
+				position: relative;
+				.wish-count {
+					position: absolute;
+					top: -5px;
+					border-radius: 50%;
+					padding: 1px 5px;
+					font-size: 11px;
+					left: 11px;
+					background: #e83e8c;
+					color: #fff;
+				}
+			}
+			.fa-shopping-basket {
+				position: relative;
+				.cart-count {
+					position: absolute;
+					top: -5px;
+					border-radius: 50%;
+					padding: 1px 5px;
+					font-size: 11px;
+					left: 11px;
+					background: #e83e8c;
+					color: #fff;
+				}
+			}
+			.iconify {
+				font-size: 1.3rem !important;
+			}
+		}
+		.input-group {
+			.iconify {
+				font-size: 1.3rem !important;
+			}
+		}
+	}
+}
+
+.icon-menu-mobile,
+.logo-img-mobile {
+	display: none !important;
+}
+.nav-icon-container-mobile {
+	display: none;
+}
+
+.fooltip {
+	position: relative;
+	text-transform: none;
+	.fooltiptext {
+		font-family: "Segoe UI", sans-serif;
+		font-size: 14px;
+		visibility: hidden;
+		width: 70px;
+		background-color: $color-primary;
+		color: $color-light;
+		text-align: center;
+		position: absolute;
+		z-index: 1;
+		top: 150%;
+		left: 50%;
+		margin-left: -35px;
+		opacity: 0;
+		padding: 8px;
+		transition: opacity 1.5s;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent transparent $color-primary transparent;
+		}
+	}
+	&:hover .fooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+// search form
+
+.nav-link:first-of-type {
+	padding: 0;
+	.search-container {
+		position: relative;
+		label {
+			position: absolute;
+			top: 8px;
+			right: 12px;
+			cursor: pointer;
+			margin: 0;
+		}
+	}
+	.search-box {
+		transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+		width: 40px;
+		height: 40px;
+		border: none;
+		cursor: pointer;
+		& + label .search-icon {
+			color: black;
+		}
+		&:focus {
+			transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39),
+				border-radius 0.6s, background 0.6s;
+			border: none;
+			outline: none;
+			box-shadow: none;
+			padding-left: 15px;
+			cursor: text;
+			width: 300px;
+			border-radius: auto;
+			background: rgb(235, 235, 235);
+			color: black;
+			& + label .search-icon {
+				color: black;
+			}
+		}
+		&:not(:focus) {
+			text-indent: -5000px;
+		}
+	}
+	#searchsubmit {
+		position: absolute;
+		left: -5000px;
+	}
+}

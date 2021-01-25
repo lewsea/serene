@@ -1,0 +1,235 @@
+// add to wishlist
+
+.yith-wishlist-tooltip-container {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+.yith-wcwl-wishlistaddedbrowse {
+	i {
+		color: #e83e8c;
+	}
+}
+
+.yith-wcwl-add-to-wishlist {
+	position: absolute;
+	top: 0 !important;
+	left: -10px !important;
+	margin: 0;
+	opacity: 0.6;
+	transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
+	z-index: 1000;
+	.fooltip {
+		position: relative;
+		text-transform: none;
+		.fooltiptext {
+			font-family: "Segoe UI", sans-serif;
+			font-size: 14px;
+			visibility: hidden;
+			width: 70px;
+			background-color: $color-primary;
+			color: $color-light;
+			text-align: center;
+			position: absolute;
+			z-index: 1;
+			top: 150%;
+			left: 50%;
+			margin-left: -35px;
+			opacity: 0;
+			padding: 8px;
+			transition: opacity 1.5s;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent $color-primary transparent;
+			}
+		}
+		&:hover .fooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&:hover {
+		opacity: 1;
+	}
+	.yith-wcwl-add-button {
+		a {
+			color: #e83e8c;
+			span {
+				display: none;
+			}
+			i {
+				margin: 0;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+// quickview
+
+.quickview-tooltip-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.woosq-btn {
+	// position: absolute;
+	// top: 10px;
+	// right: 10px;
+	font-size: 0;
+	outline: 0;
+	border: none;
+	background-color: transparent;
+	opacity: 0.7;
+	padding: 0;
+	z-index: 1000;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		opacity: 1;
+	}
+	&::before {
+		content: "\f002";
+		font: normal normal normal 19px/1 FontAwesome;
+		right: 40%;
+		color: $color-anchor;
+		bottom: 0;
+		height: 30px;
+		width: 60px;
+		z-index: 1;
+	}
+}
+
+.mfp-content {
+	.mfp-with-anim {
+		.woocommerce {
+			.product {
+				.thumbnails {
+					padding: 1rem;
+					.thumbnail {
+						border: 1px solid $color-primary;
+					}
+				}
+				.summary {
+					.summary-content {
+						.product-custom-fields {
+							p {
+								font-weight: 500;
+								margin-bottom: 10px;
+								span {
+									font-weight: 400;
+									color: $color-text-secondary;
+								}
+							}
+						}
+						h1 {
+							font-size: 2rem;
+							font-family: $Lato;
+						}
+						.price {
+							ins {
+								text-decoration: none;
+								color: $secondary-color;
+							}
+						}
+						.woocommerce-product-rating {
+							margin: 0;
+							.star-rating {
+								color: #ffc107;
+								font-size: 1rem;
+							}
+						}
+						.woocommerce-review-link {
+							color: $color-text-secondary;
+						}
+						.price {
+							del {
+								span {
+									bdi {
+										font-size: 1rem;
+									}
+								}
+							}
+							color: $primary-color;
+							font-weight: 700;
+						}
+						.woocommerce-product-details__short-description {
+							color: $color-text-secondary;
+							p {
+								font-size: 14px;
+							}
+						}
+						.cart {
+							display: flex;
+							justify-content: flex-end;
+							.quantity {
+								input {
+									height: 37px;
+								}
+							}
+							.single_add_to_cart_button {
+								background-color: transparent;
+								border: 1px solid $primary-color;
+								color: $color-anchor;
+								&:hover {
+									background-color: $primary-color;
+									color: $color-light;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// customer reviews
+
+// grid/list view
+
+.ordering-view-container {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 1rem;
+	justify-content: flex-start;
+	margin-bottom: 1.5rem;
+	.widget_berocket_lgv_widget {
+		.berocket_lgv_widget {
+			a {
+				background: transparent;
+				border-radius: 0;
+				border: 1px solid $border-color;
+				box-shadow: none;
+				&:hover {
+					background: transparent;
+					border-radius: 0;
+					box-shadow: none;
+					border: 1px solid $border-color;
+				}
+			}
+			.selected {
+				background: transparent;
+				border-radius: 0;
+				border: 1px solid $color-anchor;
+				box-shadow: none;
+				&:hover {
+					border: 1px solid $color-anchor;
+				}
+			}
+		}
+	}
+	.woocommerce-ordering {
+		margin: 0;
+	}
+}

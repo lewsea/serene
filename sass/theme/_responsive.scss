@@ -1,0 +1,181 @@
+$ms: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@media (max-width: $ms) {
+}
+
+@media (max-width: $sm) {
+	#main-nav {
+		.container {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.footer-copy {
+		.container {
+			flex-direction: column-reverse;
+			gap: 10px;
+		}
+	}
+	.slide-img {
+		display: none;
+	}
+	.two-col-products {
+		.products {
+			position: relative;
+			overflow: hidden;
+			.product-img {
+				position: absolute;
+				width: 50%;
+				z-index: -1;
+				left: -30px;
+				border: 1px solid;
+				bottom: 0;
+				transform: rotate(-45deg);
+				opacity: 0.5;
+			}
+			.product-info {
+				text-align: center;
+			}
+			.product-actions {
+				.add-to-cart-container {
+					width: unset !important;
+				}
+			}
+		}
+	}
+	.four-col-products {
+		.products {
+			.product {
+				width: 100% !important;
+			}
+		}
+	}
+	.top-album-container {
+		.woocommerce {
+			.products {
+				.product {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+	.genre-wrapper {
+		.genre-container {
+			.woocommerce {
+				.products {
+					.product {
+						flex-basis: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.woo-shop-wrapper {
+		.products {
+			.product {
+				flex: 100%;
+			}
+		}
+	}
+	.news-page-wrapper {
+		.post {
+			.entry-content {
+				flex-direction: column;
+				gap: 2rem;
+			}
+		}
+	}
+	.news-sidebar {
+		margin-top: 2rem;
+	}
+}
+
+@media (max-width: $md) {
+	// header
+	#main-menu {
+		margin-top: 1rem;
+		.menu-item {
+			padding: 1rem 0;
+		}
+	}
+	.div-flex-reverse {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	.icon-menu-nav {
+		padding: 0;
+	}
+	.nav-icon-container-mobile {
+		display: block !important;
+	}
+	.nav-icon-container {
+		display: none !important;
+	}
+	// footer
+	#wrapper-footer {
+		.email-section {
+			font-size: 14px;
+			.container {
+				flex-direction: column;
+				gap: 10px;
+				align-items: flex-start;
+				.email-input-wrapper {
+					margin: 0;
+				}
+			}
+		}
+	}
+	#colophon {
+		.footer-nav {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 0 !important;
+			.p-description {
+				display: inline;
+			}
+			.footer-nav-blocks {
+				&:nth-child(2) {
+					border-left: none !important;
+				}
+			}
+		}
+	}
+	.slick-slide {
+		gap: 10px;
+	}
+	.four-col-products {
+		.products {
+			gap: 0 !important;
+		}
+	}
+	.top-album-container {
+		.woocommerce {
+			.products {
+				gap: 0 !important;
+			}
+		}
+	}
+	.news-wrapper {
+		.news-container {
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: $lg) {
+}
+
+@media (max-width: $xl) {
+	.slick-hero {
+		img {
+			display: none !important;
+		}
+	}
+}
